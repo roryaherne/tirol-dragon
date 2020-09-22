@@ -55,9 +55,9 @@
    #features .left { padding-right: 18px; }
    #features h3 { margin-bottom: 6px; }
 
-   /* Pricing Section
+   /* schedule Section
    ------------------------------------------------------------------- */
-   .pricing-tables {
+   .schedule-tables {
       width: 82%;
       margin: 0 auto;
    }
@@ -222,9 +222,9 @@
    #features h3 { text-align: center; }
 
 
-   /* Pricing Section
+   /* schedule Section
    ------------------------------------------------------------------- */
-   .pricing-tables { width: 80%; }
+   .schedule-tables { width: 80%; }
 
 
    /* Call To Action Section
@@ -345,9 +345,9 @@
    -------------------------------------------------------------------- */
    .hero-text { width: 100%; }
 
-   /* Pricing Section
+   /* schedule Section
    ------------------------------------------------------------------- */
-   .pricing-tables { width: 92%; }
+   .schedule-tables { width: 92%; }
 
    /* Screenshots
    ------------------------------------------------------------------- */

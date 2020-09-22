@@ -1,20 +1,15 @@
 -
-  name: design
-  title: Simple, Clean and Modern Design.
-  body: Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt. Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
-  image: 'images/feature-image-1.png'
+  name: jiu jitsu
+  title: Jiu Jitsu
+  body: Brazilian jiu-jitsu is a self-defence martial art and combat sport based on grappling, ground fighting and submission holds. It focuses on the skill of controlling one's opponent, gaining a dominant position and using a number of techniques to force them in to submission via joint locks or chokeholds.
+  image: 'images/bjj.jpg'
 -
-  name: responsive
-  title: Fully Responsive.
-  body: Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu. Quis nostrum exercitationem ullam corporis suscipit laboriosam.Our library is continually refreshed with the latest on web technology so you'll never fall behind. Quis nostrum exercitationem ullam corporis suscipit laboriosam.
-  image: 'images/feature-image-2.png'
+  name: hiit
+  title: High Intensity Interval Training
+  body: High-intensity interval training, also called high-intensity intermittent exercise or sprint interval training, is a form of interval training, a cardiovascular exercise strategy alternating short periods of intense anaerobic exercise with less intense recovery periods, until too exhausted to continue.
+  image: 'images/hiit.jpg'
 -
-  name: cross-browser
-  title: Cross-Browser Compatible.
-  body: Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt. Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
-  image: 'images/feature-image-3.png'
--
-  name: video
-  title: Video Support.
-  body: Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu. Quis nostrum exercitationem ullam corporis suscipit laboriosam. No soleat fabulas prodesset vel, ut quo solum dicunt. Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
-  vimeo: 14592941
+  name: Capoeira
+  title: Capoeira
+  body: Capoeira is an Afro-Brazilian martial art that combines elements of dance, acrobatics, and music. It was developed by enslaved Africans in Brazil at the beginning of the 16th century. It is known for its acrobatic and complex maneuvers, often involving hands on the ground and inverted kicks.
+  image: 'images/capoeira.jpg'

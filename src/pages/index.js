@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 
 import Hero from "../components/hero"
 import Features from "../components/features"
-import Pricing from "../components/pricing"
+import schedule from "../components/schedule"
 import CalltoAction from "../components/call-to-action"
 import Screenshots from "../components/screenshots"
 import Testimonials from "../components/testimonials"
-import Subscribe from "../components/subscribe"
+import Contact from "../components/contact"
 
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
@@ -17,11 +17,11 @@ export default () => {
   const availableSections = {
     "hero": Hero,
     "features": Features,
-    "pricing": Pricing,
+    "schedule": schedule,
     "call-to-action": CalltoAction,
     "screenshots": Screenshots,
     "testimonials": Testimonials,
-    "subscribe": Subscribe
+    "contact": Contact
   }
 
   return(

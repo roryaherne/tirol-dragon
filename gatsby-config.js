@@ -7,65 +7,63 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Woo - Free Responsive HTML5/CSS3 Template`,
+    title: `TIROL DRAGON BRAZILIAN JIU JITSU`,
     author: {
-      name: `Joe Bloggs`,
+      name: `Rory Aherne`,
     },
-    description: `Woo is a clean, modern, landing page site template.`,
+    description: `TIROL DRAGON BRAZILIAN JIU JITSU`,
 
     /* Choose and arrange the sections to be displayed on the landing page */
     sections: [
       `hero`,
       `features`,
-      `pricing`,
+      `schedule`,
       `call-to-action`,
       `screenshots`,
       `testimonials`,
-      `subscribe`
+      `contact`
     ],
 
     /* Configure the navigation menu */
     menuItems: [
-      {path: 'features', label: 'Features'},
-      {path: 'pricing', label: 'Pricing'},
+      {path: 'features', label: 'about'},
+      {path: 'schedule', label: 'schedule'},
+      {path: 'call-to-action', label: 'news'},
       {path: 'screenshots', label: 'Screenshots'},
       {path: 'testimonials', label: 'Testimonials'},
-      {path: 'subscribe', label: 'Subscribe'},
+      {path: 'contact', label: 'Contact'},
     ],
 
     /* Provide social media accounts. Remove or add new services. (The value 'fa' is the name of FontAwesome icon to display. Choose from here: https://fontawesome.com/cheatsheet/free/brands ) */
     social: [
       { service: `Facebook`,
-        url : `https://facebook.com/styleshout`,
+        url : `https://www.facebook.com/BrasilienJiuJitsu/`,
         fa: `facebook` },
-      { service: `Twitter`,
-        url : `https://twitter.com/styleshout`,
-        fa: `twitter` },
-      { service: `GitHub`,
-        url : `https://github.com/desmukh/gatsby-starter-woo`,
-        fa: `github` },
+      { service: `Instagram`,
+        url : `https://www.instagram.com/tiroldragonbjj/`,
+        fa: `instagram` },
     ],
 
     /* Path to favicon and logo (located inside the 'static' folder) */
     favicon: `favicon.png`,
-    logo: `/images/logo.png`,
+    logo: `/images/logo.svg`,
 
     /* Logo and text to show in footer */
     footer: {
-      logo: `/images/footer-logo.png`,
+      logo: `/images/logo.svg`,
       text: `This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.`,
     },
 
     /* Address and contact info to show in footer */
     address: {
-      line1: `1600 Amphitheatre Parkway`,
-      line2: `Mountain View, CA`,
-      line3: `94043 US`,
+      line1: `Valiergasse 61`,
+      line2: `6020 Innsbruck`,
+      line3: `Austria`,
     },
     contacts: [
-      { text: `647.343.8234`, url: `tel:6473438234` },
-      { text: `123.456.7890`, url: `tel:1234567890`},
-      { text: `someone@woosite.com`, url: `mailto:someone@woo.com`},
+      { text: `+43 660 5188005`, url: `tel:+436605188005` },
+      { text: `+43 660 1116278`, url: `tel:+436601116278`},
+      { text: `contact@tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com`},
     ],
   },
   plugins: [ `gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy` ],

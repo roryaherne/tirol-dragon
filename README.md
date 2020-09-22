@@ -56,7 +56,7 @@ siteMetadata: {
   sections: [
     `hero`,
     `features`,
-    `pricing`,
+    `schedule`,
     `call-to-action`,
     `screenshots`,
     `testimonials`,
@@ -66,7 +66,7 @@ siteMetadata: {
   /* Configure the navigation menu */
   menuItems: [
     {path: 'features', label: 'Features'},
-    {path: 'pricing', label: 'Pricing'},
+    {path: 'schedule', label: 'schedule'},
     {path: 'screenshots', label: 'Screenshots'},
     {path: 'testimonials', label: 'Testimonials'},
     {path: 'subscribe', label: 'Subscribe'},

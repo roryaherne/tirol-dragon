@@ -1,0 +1,24 @@
+title: schedule
+body: Class times are as follows
+classes:
+  -
+    day: MONDAY
+    start: 17:30
+    end: 18:15
+    label: HiiT Training
+  -
+    day: MONDAY
+    start: 18:15
+    end: 19:45
+    label: BJJ All Levels
+  -
+    day: TUESDAY
+    start: 17:15
+    end: 18:00
+    label: HiiT Training
+  -
+    day: TUESDAY
+    start: 18:00
+    end: 19:00
+    label: Capoeira Training
+
