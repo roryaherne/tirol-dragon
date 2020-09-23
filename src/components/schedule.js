@@ -15,7 +15,7 @@ export default () => {
       </div>
 
       <div className="row">
-        <div className="schedule-tables bgrid-quarters s-bgrid-halves">
+        <div className="schedule-tables bgrid-sixths s-bgrid-halves">
           { content.classes.map((plan, index) =>
             <div className="column">
               <div className="price-block">

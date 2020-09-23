@@ -12,7 +12,7 @@ export default () => {
   return (
     <ul className="header-social">
       { social.map((mySocial) =>
-        <li><a href={ mySocial.url } target='_blank'>
+        <li><a href={ mySocial.url } target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon icon={['fab', mySocial.fa ]} />
         </a></li>
       )}

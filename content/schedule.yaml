@@ -21,4 +21,34 @@ classes:
     start: 18:00
     end: 19:00
     label: Capoeira Training
+  -
+    day: WEDNESDAY
+    start: 07:00
+    end: 08:00
+    label: Kettlebell Training
+  -
+    day: WEDNESDAY
+    start: 17:30
+    end: 18:15
+    label: HiiT Training
+  -
+    day: WEDNESDAY
+    start: 18:15
+    end: 19:45
+    label: BJJ All Levels
+  -
+    day: FRIDAY
+    start: 07:00
+    end: 08:30
+    label: BJJ All Levels
+  -
+    day: FRIDAY
+    start: 18:00
+    end: 20:00
+    label: BJJ No Gi
+  -
+    day: SATURDAY
+    start: 08:00
+    end: 09:00
+    label: Fitness Bootcamp
 

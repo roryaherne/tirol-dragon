@@ -7,14 +7,15 @@ import HeaderSocial from "./header-social"
 
 export default () => (
     <header>
-      <div className="logo">
-         <AnchorLink to="/#top">
-           <img alt="" src={ useSiteMetadata().logo } />
-         </AnchorLink>
+      <div className='wrapper'>
+        <div className="logo">
+          <AnchorLink to="/#top">
+            <img alt="" src={ useSiteMetadata().logo } />
+          </AnchorLink>
+        </div>
+      
+        <NavMenu />
+        <HeaderSocial />
       </div>
-
-      <NavMenu />
-      <HeaderSocial />
-
     </header>
   )

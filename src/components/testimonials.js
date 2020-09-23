@@ -15,7 +15,7 @@ const MySlider = () =>{
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     autoplay: true,
     autoplaySpeed: 7000,
     draggable: false,

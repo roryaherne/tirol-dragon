@@ -102,6 +102,7 @@
    /* mobile navigation
    -------------------------------------------------------------------- */
    #nav-wrap {
+      height: 3.375rem;
       font: 11px 'Montserrat', sans-serif;
       background: transparent !important;
       letter-spacing: 1.5px;
