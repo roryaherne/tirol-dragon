@@ -7,27 +7,34 @@ export default () => {
 
   library.add(fas)
 
+
+
   return (
     <section id="schedule">
       <div className="row section-head">
-        <h1>{ content.title }</h1>
-        <p>{ content.body }</p>
+        <h1>{content.title}</h1>
+        <p>{content.body}</p>
       </div>
 
       <div className="row">
-        <div className="schedule-tables bgrid-sixths s-bgrid-halves">
-          { content.classes.map((plan, index) =>
-            <div className="column">
-              <div className="price-block">
-                <h3 className="plan-title">
-                  { plan.day }
+        <div className="schedule-tables bgrid-fifths s-bgrid-halves">
+          {content.days.map((day, index) =>
+            <div className="column no-padding">
+              <div className="day-block">
+                <h3 className="day">
+                  {day.name}
                 </h3>
-                <p className="plan-price">
-                  <span>{ plan.start } - { plan.end }</span>
-                </p>
-                <footer className="plan-sign-up">
-                { plan.label }
-                </footer>
+                {day.classes.map((unit, index) =>
+                  <React.Fragment>
+                  <p className="plan-time">
+                    <span>{unit.start} - {unit.end}</span>
+                  </p>
+                  <footer className="plan-label">
+                    {unit.label}
+                  </footer>
+                  </React.Fragment>
+                )
+                }
               </div>
             </div>
           )

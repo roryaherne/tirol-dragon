@@ -224,8 +224,6 @@ h6 {
    line-height: 30px;
 }
 
-.subheader {}
-
 p {
    margin: 0 0 30px 0;
 }
@@ -446,10 +444,6 @@ li {
    margin-bottom: 12px;
 }
 
-ul.large li {}
-
-li p {}
-
 /* ---------------------------------------------------------------------
 /*  Stats Tab Markup
 
@@ -600,8 +594,6 @@ dd {
    background-color: #E6E8EB;
    color: #A9ADB2;
 }
-
-.pagination .prev, .pagination .next {}
 
 /* 5. Media   --------------------------------------------------------- */
 

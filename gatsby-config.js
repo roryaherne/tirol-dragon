@@ -7,11 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `TIROL DRAGON BRAZILIAN JIU JITSU`,
+    title: `Tirol Dragon Brazilian Jiu Jitsu`,
     author: {
       name: `Rory Aherne`,
     },
-    description: `TIROL DRAGON BRAZILIAN JIU JITSU`,
+    description: `Tirol Dragon Brazilian Jiu Jitsu`,
 
     /* Choose and arrange the sections to be displayed on the landing page */
     sections: [
