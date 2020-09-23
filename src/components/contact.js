@@ -15,7 +15,10 @@ export default () => (
   <div className="row">
     <div className="twelve columns">
       <div id="mc_embed_signup">
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" action="thank-you" netlify-honeypot="bot-field">
+        <p class="hidden" style="display: none;">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
           <ScrollAnimation animateIn="fadeInLeftBig" animateOnce={true}>
             <input
               type="email"
@@ -27,10 +30,6 @@ export default () => (
               required
             />
           </ScrollAnimation>
-             {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
-             <div style={{position: "absolute", left: "-5000px"}}>
-               <input type="text" name="b_cdb7b577e41181934ed6a6a44_e65110b38d" defaultValue="" />
-             </div>
              <div className="clear">
                <ScrollAnimation
                  animateIn="fadeInRightBig"
