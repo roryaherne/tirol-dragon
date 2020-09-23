@@ -21,6 +21,7 @@ module.exports = {
       `call-to-action`,
       `screenshots`,
       `testimonials`,
+      'faqs',
       `contact`
     ],
 
@@ -31,6 +32,7 @@ module.exports = {
       {path: 'call-to-action', label: 'news'},
       {path: 'screenshots', label: 'Screenshots'},
       {path: 'testimonials', label: 'Testimonials'},
+      {path: 'faqs', label: 'faqs'},
       {path: 'contact', label: 'Contact'},
     ],
 

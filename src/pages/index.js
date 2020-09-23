@@ -9,6 +9,7 @@ import CalltoAction from "../components/call-to-action"
 import Screenshots from "../components/screenshots"
 import Testimonials from "../components/testimonials"
 import Contact from "../components/contact"
+import FAQS from "../components/faqs"
 
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
@@ -21,6 +22,7 @@ export default () => {
     "call-to-action": CalltoAction,
     "screenshots": Screenshots,
     "testimonials": Testimonials,
+    "faqs": FAQS,
     "contact": Contact
   }
 
