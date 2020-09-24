@@ -35,7 +35,7 @@ const MySlider = () =>{
         <span><i className="quote-left fa"><FontAwesomeIcon icon={ faQuoteLeft } /></i></span>
         <div className="text-container">
           <div className="twelve columns">
-            <h1>{ content.title }</h1>
+            <h2>{ content.title }</h2>
           </div>
           <div className="twelve columns flex-container">
           <Slider {...settings} style={{ userSelect: 'text' }}>

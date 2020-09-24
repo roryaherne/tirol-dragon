@@ -7,7 +7,7 @@ export default () => (
   <section id="call-to-action">
     <div className="row">
       <div className="two columns header-col">
-        <h1><FontAwesomeIcon icon={faAmbulance} /><span>Covid News</span></h1>
+        <h2><FontAwesomeIcon icon={faAmbulance} /><span>Covid News</span></h2>
       </div>
       <div className="seven columns">
         <h2><a href={ content.title.url }>{ content.title.text }</a></h2>

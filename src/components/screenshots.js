@@ -26,7 +26,7 @@ export default class LightboxExample extends Component {
       <section id="screenshots">
 
         <div className="row section-head">
-          <h1>{ content.title }</h1>
+          <h2>{ content.title }</h2>
           <p>{ content.body }</p>
      </div>
      <div className="row">

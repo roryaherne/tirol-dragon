@@ -6,7 +6,7 @@ export default () => (
   <section id="contact">
     <div className="row section-head">
       <div className="twelve columns">
-        <h1>{content.title}</h1>
+        <h2>{content.title}</h2>
         <p>{content.body}</p>
       </div>
     </div>
