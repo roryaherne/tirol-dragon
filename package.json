@@ -26,10 +26,12 @@
     "react-accessible-accordion": "^3.3.3",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",
+    "react-google-structured-data": "^3.0.0",
     "react-helmet": "^6.0.0",
     "react-image-lightbox": "^5.1.1",
     "react-scrollspy": "^3.4.2",
     "react-slick": "^0.25.2",
+    "react-structured-data": "0.0.14",
     "slick-carousel": "^1.8.1",
     "typeface-montserrat": "0.0.75",
     "typeface-open-sans": "0.0.75"

@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    url: `https://www.tiroldragonbjj.com`,
     title: `Tirol Dragon Brazilian Jiu Jitsu`,
     author: {
       name: `Rory Aherne`,
@@ -21,7 +22,7 @@ module.exports = {
       `call-to-action`,
       `screenshots`,
       `testimonials`,
-      'faqs',
+      `faqs`,
       `contact`
     ],
 
@@ -59,8 +60,10 @@ module.exports = {
     /* Address and contact info to show in footer */
     address: {
       line1: `Valiergasse 61`,
-      line2: `6020 Innsbruck`,
-      line3: `Austria`,
+      zip: `6020`,
+      city: `Innsbruck`,
+      state: `Tirol`,
+      country: `Austria`,
     },
     contacts: [
       { text: `+43 660 5188005`, url: `tel:+436605188005` },

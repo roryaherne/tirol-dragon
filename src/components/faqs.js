@@ -1,5 +1,6 @@
 import React from "react"
 import content from '../../content/faqs.yaml'
+import FAQPage from './structured-data/faqPage'
 
 import {
   Accordion,
@@ -12,14 +13,12 @@ import {
 
 export default () => {
 
-
-
   return (
     <section id="faqs">
       <div className="row content">
         <div className="text-container">
           <div className="row section-head">
-            <h1>{content.title}</h1>
+            <h2>{content.title}</h2>
           </div>
           <div className="twelve columns flex-container">
             <p className="accordion-wrapper">
@@ -28,21 +27,22 @@ export default () => {
                   <AccordionItem>
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <h5>{faq.question}</h5>
+                        <h3 className='heading'>{faq.question}</h3>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
-                    <p>
-                    {faq.answer}
-                    </p>
-                </AccordionItemPanel>
-                    </AccordionItem>
-                      )}
-            </Accordion>
+                      <p>
+                        {faq.answer}
+                      </p>
+                    </AccordionItemPanel>
+                  </AccordionItem>
+                )}
+              </Accordion>
             </p>
           </div>
         </div>
-          </div>
+      </div>
+      <FAQPage faqs={content.faqs} />
     </section>
   )
 }

@@ -5,6 +5,7 @@ export const useSiteMetadata = () => {
       query MyQuery {
         site {
           siteMetadata {
+            url
             title
             description
             author{
@@ -28,8 +29,10 @@ export const useSiteMetadata = () => {
             }
             address{
               line1
-              line2
-              line3
+              zip
+              city
+              state
+              country
             }
             contacts {
               text

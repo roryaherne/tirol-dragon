@@ -5,6 +5,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 import Header from "./header"
 import Footer from "./footer"
+import Organisation from "./structured-data/organisation"
 
 import "../styles/default.css"
 import "../styles/layout.css"
@@ -19,29 +20,27 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-export default function Layout ({ children }){
+export default function Layout({ children }) {
 
   const { title, description, author, favicon } = useSiteMetadata()
 
-  return(
+  return (
     <>
-    <Helmet>
-      <title>{ title }</title>
-      <meta name="description" content={ description } />
-      <meta name="author" content={ author.name } />
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="author" content={author.name} />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="shortcut icon" href={'/' + favicon} type="image/png" />
+      </Helmet>
+      <Organisation />
+      <Header />
 
-    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <main id="top">
+        {children}
+      </main>
 
-      <link rel="shortcut icon" href={'/' + favicon } type="image/png" />
-    </Helmet>
-
-    <Header />
-
-  <main id="top">
-    {children}
-  </main>
-
-  <Footer />
-  </>
+      <Footer />
+    </>
   )
 }
