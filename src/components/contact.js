@@ -14,7 +14,7 @@ export default () => (
     <div className="row">
       <div className="twelve columns">
         <div id="ContactUsForm">
-          <form name="contact" method="POST" data-netlify="true" action="thank-you" netlify-honeypot="bot-field">
+          <form name="contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
             <p hidden>
               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>

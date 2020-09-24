@@ -5,11 +5,15 @@ export const useSiteMetadata = () => {
       query MyQuery {
         site {
           siteMetadata {
-            url
+            siteUrl
             title
             description
             author{
               name
+            }
+            siteVerification{
+              google
+              bing
             }
             sections
             favicon
@@ -23,6 +27,7 @@ export const useSiteMetadata = () => {
               url
               fa
             }
+            keywords
             footer{
               text
               logo

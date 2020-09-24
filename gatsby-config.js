@@ -7,12 +7,12 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    url: `https://www.tiroldragonbjj.com`,
-    title: `Tirol Dragon Brazilian Jiu Jitsu`,
+    siteUrl: `https://www.tiroldragonbjj.com`,
+    title: `Tirol Dragon BJJ - Brazilian Jiu Jitsu and Fitness Training`,
     author: {
       name: `Rory Aherne`,
     },
-    description: `Tirol Dragon Brazilian Jiu Jitsu`,
+    description: `A club for Brazilian Jiu Jitsu BJJ and HiiT fitness training for all levels, ages and abilities`,
 
     /* Choose and arrange the sections to be displayed on the landing page */
     sections: [
@@ -26,25 +26,36 @@ module.exports = {
       `contact`
     ],
 
+    keywords: ['bjj', 'brazilian jiu jitsu', 'fitness', 'Hiit'],
+
+    siteVerification: {
+      google: '',
+      bing: ''
+    },
+
     /* Configure the navigation menu */
     menuItems: [
-      {path: 'features', label: 'about'},
-      {path: 'schedule', label: 'schedule'},
-      {path: 'call-to-action', label: 'news'},
-      {path: 'screenshots', label: 'Screenshots'},
-      {path: 'testimonials', label: 'Testimonials'},
-      {path: 'faqs', label: 'faqs'},
-      {path: 'contact', label: 'Contact'},
+      { path: 'features', label: 'about' },
+      { path: 'schedule', label: 'schedule' },
+      { path: 'call-to-action', label: 'news' },
+      { path: 'screenshots', label: 'Screenshots' },
+      { path: 'testimonials', label: 'Testimonials' },
+      { path: 'faqs', label: 'faqs' },
+      { path: 'contact', label: 'Contact' },
     ],
 
     /* Provide social media accounts. Remove or add new services. (The value 'fa' is the name of FontAwesome icon to display. Choose from here: https://fontawesome.com/cheatsheet/free/brands ) */
     social: [
-      { service: `Facebook`,
-        url : `https://www.facebook.com/BrasilienJiuJitsu/`,
-        fa: `facebook` },
-      { service: `Instagram`,
-        url : `https://www.instagram.com/tiroldragonbjj/`,
-        fa: `instagram` },
+      {
+        service: `Facebook`,
+        url: `https://www.facebook.com/BrasilienJiuJitsu/`,
+        fa: `facebook`
+      },
+      {
+        service: `Instagram`,
+        url: `https://www.instagram.com/tiroldragonbjj/`,
+        fa: `instagram`
+      },
     ],
 
     /* Path to favicon and logo (located inside the 'static' folder) */
@@ -67,9 +78,22 @@ module.exports = {
     },
     contacts: [
       { text: `+43 660 5188005`, url: `tel:+436605188005` },
-      { text: `+43 660 1116278`, url: `tel:+436601116278`},
-      { text: `contact@tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com`},
+      { text: `+43 660 1116278`, url: `tel:+436601116278` },
+      { text: `contact@tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com` },
     ],
   },
-  plugins: [ `gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy` ],
+  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/robots`, `/sitemap`]
+      }
+    }
+  ],
 }

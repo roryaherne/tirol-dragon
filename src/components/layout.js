@@ -22,7 +22,7 @@ config.autoAddCss = false
 
 export default function Layout({ children }) {
 
-  const { title, description, author, favicon } = useSiteMetadata()
+  const { title, description, author, favicon, logo, url } = useSiteMetadata()
 
   return (
     <>
@@ -32,6 +32,14 @@ export default function Layout({ children }) {
         <meta name="author" content={author.name} />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="shortcut icon" href={'/' + favicon} type="image/png" />
+        <meta name="robots" content="index,follow" />
+        <link href={url} rel="canonical" />
+        <meta property="og:title" content="SOS-Kinderdörfer weltweit" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={logo} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:description" content={description} />
       </Helmet>
       <Organisation />
       <Header />

@@ -5,7 +5,7 @@ import { JSONLD, Generic } from 'react-structured-data';
 
 export default function () {
 
-    const { url, address, social, logo } = useSiteMetadata()
+    const { url: siteUrl, address, social, logo } = useSiteMetadata()
 
     function getSocialLinksArray(){
         return social.map((socialObj, index) =>
@@ -17,8 +17,8 @@ export default function () {
         var obj = {
             name: "Tirol Dragon BJJ",
             legalName: "Tirol Dragon BJJ",
-            url: url,
-            logo: `${url}${logo}`,
+            url: siteUrl,
+            logo: `${siteUrl}${logo}`,
             foundingDate: "2016",
             founders: [{
                 "@type": "Person",
