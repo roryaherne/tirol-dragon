@@ -240,13 +240,13 @@
    #call-to-action h1 span { display: block; }
    #call-to-action .header-col h1 svg { display: none; }
 
-   /* Screenshots
+   /* image-gallery
    ------------------------------------------------------------------- */
-   #screenshots-wrapper {
+   #image-gallery-wrapper {
       width: 80%;
       margin: 0 auto;
    }
-   #screenshots-wrapper .columns { margin-bottom: 36px; }
+   #image-gallery-wrapper .columns { margin-bottom: 36px; }
 
 
    /* Testimonials Section
@@ -350,9 +350,9 @@
    ------------------------------------------------------------------- */
    .schedule-tables { width: 92%; }
 
-   /* Screenshots
+   /* image-gallery
    ------------------------------------------------------------------- */
-   #screenshots-wrapper { width: 92%; }
+   #image-gallery-wrapper { width: 92%; }
 
    /* Testimonials Section
    ------------------------------------------------------------------- */

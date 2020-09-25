@@ -58,7 +58,7 @@ siteMetadata: {
     `features`,
     `schedule`,
     `call-to-action`,
-    `screenshots`,
+    `image-gallery`,
     `testimonials`,
     `subscribe`
   ],
@@ -67,7 +67,7 @@ siteMetadata: {
   menuItems: [
     {path: 'features', label: 'Features'},
     {path: 'schedule', label: 'schedule'},
-    {path: 'screenshots', label: 'Screenshots'},
+    {path: 'image-gallery', label: 'image-gallery'},
     {path: 'testimonials', label: 'Testimonials'},
     {path: 'subscribe', label: 'Subscribe'},
   ],

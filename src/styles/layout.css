@@ -11,7 +11,7 @@
    c. Hero Section
    d. Features Section
    e. schedule Section
-   f. Screenshots Section
+   f. image-gallery Section
    g. Call To Action Section
    h. Testimonials Section
    i. Contact Section
@@ -428,10 +428,10 @@ ul.features li {
 
 /* ------------------------------------------------------------------ */
 
-/* c. Screenshots
+/* c. image-gallery
 /* ------------------------------------------------------------------ */
 
-#screenshots {
+#image-gallery {
    background: #fff url(img/grey.png);
    padding-top: 96px;
    padding-bottom: 120px;
@@ -440,7 +440,7 @@ ul.features li {
 /* For high-res devices */
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-   #screenshots {
+   #image-gallery {
       background: #fff url(img/grey_@2X.png);
       background-size: 397px 322px;
    }
@@ -448,7 +448,7 @@ ul.features li {
 
 /* Portfolio Content */
 
-#screenshots-wrapper .columns {
+#image-gallery-wrapper .columns {
    padding: 0;
 }
 

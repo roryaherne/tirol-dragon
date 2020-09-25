@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
-import content from '../../content/screenshots.yaml'
+import content from '../../content/image-gallery.yaml'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-const screenshots = content.screenshots
+const imageGallery = content.imageGallery
 
 export default class LightboxExample extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ export default class LightboxExample extends Component {
     const { photoIndex, isOpen } = this.state;
 
     return (
-      <section id="screenshots">
+      <section id="image-gallery">
 
         <div className="row section-head">
           <h2>{ content.title }</h2>
@@ -31,22 +31,22 @@ export default class LightboxExample extends Component {
      </div>
      <div className="row">
        <div className="twelve columns">
-         <div id="screenshots-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+         <div id="image-gallery-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
 
-           {screenshots.map((screenshot, index) => {
+           {imageGallery.map((image, index) => {
              return (
                <div className="columns item" key={index.toString()}>
                  <div className="item-wrap">
 
                    <a
-                     href={'images/screenshots/big/' + screenshot.big}
+                     href={'images/image-gallery/big/' + image.big}
                      data-imagelightbox="a" onClick={event => {
                         event.preventDefault()
                         this.setState({ isOpen: true, photoIndex: index, })
                   }}>
                      <img
-                       src={'images/screenshots/' + screenshot.thumb}
-                       alt={screenshot.caption} />
+                       src={'images/image-gallery/' + image.thumb}
+                       alt={image.caption} />
                        <div className="overlay"></div>
                          <div className="link-icon">
                            <FontAwesomeIcon icon={faPlus} />
@@ -65,25 +65,25 @@ export default class LightboxExample extends Component {
       {isOpen && (
         <Lightbox
           mainSrc={
-            'images/screenshots/big/' + screenshots[photoIndex].big
+            'images/image-gallery/big/' +imageGallery[photoIndex].big
           }
           nextSrc={
-            'images/screenshots/big/' + screenshots[(photoIndex + 1) % screenshots.length].big
+            'images/image-gallery/big/' +imageGallery[(photoIndex + 1) %imageGallery.length].big
           }
           prevSrc={
-            'images/screenshots/big/' + screenshots[(photoIndex + screenshots.length - 1) % screenshots.length].big}
+            'images/image-gallery/big/' +imageGallery[(photoIndex +imageGallery.length - 1) %imageGallery.length].big}
           onCloseRequest={() => this.setState({ isOpen: false })}
           onMovePrevRequest={() =>
             this.setState({
-              photoIndex: (photoIndex + screenshots.length - 1) % screenshots.length,
+              photoIndex: (photoIndex +imageGallery.length - 1) %imageGallery.length,
             })
           }
           onMoveNextRequest={() =>
             this.setState({
-              photoIndex: (photoIndex + 1) % screenshots.length,
+              photoIndex: (photoIndex + 1) %imageGallery.length,
             })
           }
-          imageCaption={screenshots[photoIndex].caption}
+          imageCaption={imageGallery[photoIndex].caption}
           enableZoom={false}
         />
       )}

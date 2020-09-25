@@ -20,7 +20,6 @@ module.exports = {
       `features`,
       `schedule`,
       `call-to-action`,
-      `screenshots`,
       `testimonials`,
       `faqs`,
       `contact`
@@ -38,10 +37,9 @@ module.exports = {
       { path: 'features', label: 'about' },
       { path: 'schedule', label: 'schedule' },
       { path: 'call-to-action', label: 'news' },
-      { path: 'screenshots', label: 'Screenshots' },
-      { path: 'testimonials', label: 'Testimonials' },
+      { path: 'testimonials', label: 'testimonials' },
       { path: 'faqs', label: 'faqs' },
-      { path: 'contact', label: 'Contact' },
+      { path: 'contact', label: 'contact' },
     ],
 
     /* Provide social media accounts. Remove or add new services. (The value 'fa' is the name of FontAwesome icon to display. Choose from here: https://fontawesome.com/cheatsheet/free/brands ) */

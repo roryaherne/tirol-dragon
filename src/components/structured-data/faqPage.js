@@ -8,7 +8,7 @@ export default function ({ faqs }) {
     function getFAQsArray() {
         var faqsArray = [];
 
-        faqs.map((faq, index) => {
+        faqs.forEach((faq) => {
             var faqObj = {
                 "@type": "Question",
                 name: faq.question,
