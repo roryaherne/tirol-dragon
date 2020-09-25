@@ -18,7 +18,7 @@ export default () => (
         </div>
 
         <div className="hero-image">
-          <img src={ content.image } alt="" className="animated fadeInUpBig" />
+          <img src={ content.image } alt="hero" />
         </div>
       </div>
     </div>
