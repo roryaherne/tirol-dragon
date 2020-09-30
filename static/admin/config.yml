@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: roryaherne/tirol-dragon
 
 media_folder: static/assets
 public_folder: /assets
