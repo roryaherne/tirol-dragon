@@ -16,58 +16,61 @@ export default () => {
 
           <div className="footer-logo">
             <AnchorLink to="/">
-              <img src={ footer.logo } alt="" />
+              <img src={footer.logo} alt="" />
             </AnchorLink>
           </div>
 
-          <p>{ footer.text }</p>
+          <p>{footer.text}</p>
 
         </div>
 
         <div className="six columns right-cols">
           <div className="row">
             <div className="columns">
-              <FontAwesomeIcon icon={ faMapMarkerAlt } />
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
               <h3 className="address">Come Visit</h3>
               <p>
-                { address.line1 }<br />
-                { address.line2 }<br />
-                { address.line3 }
-             </p>
-           </div>
+                {address.line1}<br />
+                {address.line2}<br />
+                {address.line3}
+              </p>
+            </div>
 
-         <div className="columns">
-           <FontAwesomeIcon icon={ faUsers } />
-           <h3 className="social">socialize</h3>
-           <ul>
-             { social.map(mySocial =>
-               <li key={mySocial.service}><a href={ mySocial.url }>
-                 { mySocial.service }
-               </a></li>
-             )}
-           </ul>
-        </div>
+            <div className="columns">
+              <FontAwesomeIcon icon={faUsers} />
+              <h3 className="social">socialize</h3>
+              <ul>
+                {social.map(mySocial =>
+                  <li key={mySocial.service}><a href={mySocial.url}>
+                    {mySocial.service}
+                  </a></li>
+                )}
+              </ul>
+            </div>
 
-          <div className="columns last">
-            <FontAwesomeIcon icon={ faEnvelope } />
-             <h3 className="contact">Contact Us</h3>
-             <ul>
-               { contacts.map((contact, index) =>
-                 <li key={index}><a href={ contact.url }>{ contact.text }</a></li>
-               )}
-             </ul>
+            <div className="columns last">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <h3 className="contact">Contact Us</h3>
+              <ul>
+                {contacts.map((contact, index) =>
+                  <li key={index}>
+                    <a href={contact.url}><FontAwesomeIcon icon={contact.icon} /> {contact.text}</a>
+                  </li>
+                )}
+              </ul>
+            </div>
           </div>
         </div>
+
+        <p className="copyright">&copy; 2020 Rory Aherne</p>
+
+        <div id="go-top">
+          <button title="Back to Top" onClick={() => scrollTo('#top')}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </button>
+        </div>
       </div>
+    </footer>
 
-      <p className="copyright">&copy; 2020 Rory Aherne</p>
-
-      <div id="go-top">
-        <button title="Back to Top" onClick={() => scrollTo('#top')}>
-          <FontAwesomeIcon icon={ faChevronUp } />
-        </button>
-      </div>
-    </div>
-  </footer>
-
-)}
+  )
+}

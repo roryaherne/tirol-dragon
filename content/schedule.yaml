@@ -1,13 +1,21 @@
-title: schedule
+title: Schedule
 body: Class times are as follows
 days:
   -
     name: MONDAY
     classes:
       - 
+        start: 07:30
+        end: 08:30
+        label: bjj all levels
+      - 
+        start: 16:45
+        end: 17:15
+        label: HiiT Training
+      - 
         start: 17:30
         end: 18:15
-        label: HiiT Training
+        label: Kettlebell Training
       - 
         start: 18:15
         end: 19:45

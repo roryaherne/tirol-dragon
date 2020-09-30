@@ -5,9 +5,8 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Features from "../components/features"
 import Schedule from "../components/schedule"
-import CalltoAction from "../components/call-to-action"
+import Coaches from "../components/coaches"
 import Testimonials from "../components/testimonials"
-import Contact from "../components/contact"
 import FAQS from "../components/faqs"
 
 import { useSiteMetadata } from "../hooks/use-site-metadata"
@@ -18,10 +17,9 @@ export default () => {
     "hero": Hero,
     "features": Features,
     "schedule": Schedule,
-    "call-to-action": CalltoAction,
+    "coaches": Coaches,
     "testimonials": Testimonials,
     "faqs": FAQS,
-    "contact": Contact
   }
 
   return(

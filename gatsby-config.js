@@ -19,10 +19,9 @@ module.exports = {
       `hero`,
       `features`,
       `schedule`,
-      `call-to-action`,
+      `coaches`,
       `testimonials`,
-      `faqs`,
-      `contact`
+      `faqs`
     ],
 
     keywords: ['bjj', 'brazilian jiu jitsu', 'fitness', 'Hiit'],
@@ -36,10 +35,9 @@ module.exports = {
     menuItems: [
       { path: 'features', label: 'about' },
       { path: 'schedule', label: 'schedule' },
-      { path: 'call-to-action', label: 'news' },
+      { path: 'coaches', label: 'coaches' },
       { path: 'testimonials', label: 'testimonials' },
-      { path: 'faqs', label: 'faqs' },
-      { path: 'contact', label: 'contact' },
+      { path: 'faqs', label: 'faqs' }
     ],
 
     /* Provide social media accounts. Remove or add new services. (The value 'fa' is the name of FontAwesome icon to display. Choose from here: https://fontawesome.com/cheatsheet/free/brands ) */
@@ -75,12 +73,12 @@ module.exports = {
       country: `Austria`,
     },
     contacts: [
-      { text: `+43 660 5188005`, url: `tel:+436605188005` },
-      { text: `+43 660 1116278`, url: `tel:+436601116278` },
-      { text: `contact@tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com` },
+      { text: `+43 660 5188005`, url: `tel:+436605188005`, icon: 'faMobile' },
+      { text: `+43 660 1116278`, url: `tel:+436601116278` , icon: 'faMobile' },
+      { text: `contact[@]tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com?subject=Bjj%20Enquiry`, icon: 'faEnvelope' },
     ],
   },
-  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`,
+  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`, `gatsby-plugin-less`, `gatsby-plugin-netlify-cms`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

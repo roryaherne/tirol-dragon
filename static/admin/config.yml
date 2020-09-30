@@ -1,0 +1,17 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: schedule
+    label: Schedule
+    folder: _schedule
+    create: true
+    fields:
+      - { name: title, label: Title, default: "unique title eg: Monday Bjj 1" }
+      - { label: day, name: day, widget: select, options: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]}
+      - { label: "Start Time", name: startTime, widget: string}
+      - { label: "End Time", name: endTime, widget: string}
+      - { label: "Class Name", name: classLabel, widget: string}

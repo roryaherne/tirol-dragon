@@ -4,7 +4,7 @@ import content from "../../content/features.yaml"
 
 export default () => (
 
-  <section id='features'>
+  <section id='features' className='white-section'>
     {content.map((value, index) => {
 
       let pos, imagepos

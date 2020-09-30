@@ -42,6 +42,7 @@ export const useSiteMetadata = () => {
             contacts {
               text
               url
+              icon
             }
           }
         }
