@@ -40,6 +40,7 @@ export default function Layout({ children }) {
         <meta property="og:image" content={logo} />
         <meta property="og:site_name" content={title} />
         <meta property="og:description" content={description} />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Helmet>
       <Organisation />
       <Header />
@@ -49,6 +50,18 @@ export default function Layout({ children }) {
       </main>
 
       <Footer />
+      <script dangerouslySetInnerHTML={{
+        __html: `
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+`}} />
     </>
   )
 }

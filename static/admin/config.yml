@@ -1,6 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: roryaherne/tirol-dragon
+  local_backend: true
 
 media_folder: static/assets
 public_folder: /assets
@@ -11,8 +12,23 @@ collections:
     folder: _schedule
     create: true
     fields:
-      - { name: title, label: Title, default: "unique title eg: Monday Bjj 1" }
+      - { label: Title, name: title, hint: "unique title eg: Monday Bjj 1" }
       - { label: day, name: day, widget: select, options: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]}
       - { label: "Start Time", name: startTime, widget: string}
       - { label: "End Time", name: endTime, widget: string}
       - { label: "Class Name", name: classLabel, widget: string}
+  - name: coaches
+    label: Coaches
+    folder: _coaches
+    create: true
+    fields:
+      - { label: Title, name: title, hint: "unique title eg: Victor Duarte" }
+      - { label: about, name: about, widget: text}
+      - { label: image, name: image, widget: image }
+  - name: faqs
+    label: FAQs
+    folder: _faqs
+    create: true
+    fields:
+      - { label: Question, name: title, widget: string }
+      - { label: Answer, name: answer, widget: text }
