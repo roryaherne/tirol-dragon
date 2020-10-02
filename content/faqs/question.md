@@ -1,4 +1,0 @@
----
-title: question
-answer: answer
----
