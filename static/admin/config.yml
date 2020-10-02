@@ -39,5 +39,6 @@ collections:
     fields:
       - { label: Title, name: title }
       - { label: Name, name: name }
-      - { label: Body, name: body, widget: text }
+      - { label: About, name: about, widget: text }
       - { label: Image, name: image, widget: image }
+      - { label: Order, name: order, widget: number, value_type: "int", min: 1}

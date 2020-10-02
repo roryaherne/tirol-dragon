@@ -7,7 +7,7 @@ export default function() {
   const data = useStaticQuery(
     graphql`
     query FeaturesQuery {
-      allFile(filter: {relativePath: {glob: "features/*"}}) {
+      allFile(filter: {relativePath: {glob: "features/*"}}, sort: {fields: birthtime}) {
         edges {
           node {
             childMarkdownRemark {
@@ -22,6 +22,8 @@ export default function() {
       }
     }
     `)
+
+  console.log(data)
 
   return(
   <section id='features' className='white-section'>
@@ -40,7 +42,7 @@ export default function() {
         <div className={'row feature ' + frontmatter.name}>
           <div className={'six columns ' + pos}>
             <h3>{frontmatter.title}</h3>
-            <p>{frontmatter.body}</p>
+            <p>{frontmatter.about}</p>
           </div>
 
           <ScrollAnimation
