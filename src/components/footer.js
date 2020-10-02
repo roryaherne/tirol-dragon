@@ -7,10 +7,12 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faMapMarkerAlt, faUsers, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import "../styles/components/footer.less"
+
 export default () => {
     const { social, footer, address, contacts } = useSiteMetadata()
     return (
-        <footer>
+        <footer className="footer">
             <div className="row">
                 <div className="six columns info">
 
@@ -27,13 +29,15 @@ export default () => {
                 <div className="six columns right-cols">
                     <div className="row">
                         <div className="columns">
-                            <FontAwesomeIcon icon={faMapMarkerAlt} />
-                            <h3 className="address">Come Visit</h3>
-                            <p>
-                                {address.line1}<br />
-                                {address.line2}<br />
-                                {address.line3}
-                            </p>
+                            <a href={`https://www.google.com/maps/search/?api=1&query=${address.line1},+${address.zip}+${address.city}`} target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faMapMarkerAlt} />
+                                <h3 className="address">Come Visit</h3>
+                                <p>
+                                    {address.line1}<br />
+                                    {address.zip} {address.city}<br />
+                                    {address.country}
+                                </p>
+                            </a>
                         </div>
 
                         <div className="columns">

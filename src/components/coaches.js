@@ -10,7 +10,7 @@ export default function Coaches() {
   const data = useStaticQuery(
     graphql`
     query CoachesQuery {
-      allFile(filter: {relativePath: {glob: "coaches/*"}}, sort: {fields: birthtime}) {
+      allFile(filter: {relativePath: {glob: "coaches/*"}}, sort: {fields: childMarkdownRemark___frontmatter___order}) {
         edges {
           node {
             childMarkdownRemark {

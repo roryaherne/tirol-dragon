@@ -25,6 +25,7 @@ collections:
       - { label: Title, name: title, hint: "unique title eg: Victor Duarte" }
       - { label: about, name: about, widget: text}
       - { label: image, name: image, widget: image }
+      - { label: Order, name: order, widget: number, value_type: "int", min: 1}
   - name: faqs
     label: FAQs
     folder: /content/faqs
@@ -42,3 +43,10 @@ collections:
       - { label: About, name: about, widget: text }
       - { label: Image, name: image, widget: image }
       - { label: Order, name: order, widget: number, value_type: "int", min: 1}
+  - name: testimonials
+    label: Testimonials
+    folder: /content/testimonials
+    create: true
+    fields:
+      - { label: Text, name: text, widget: text }
+      - { label: Cite, name: title, widget: string }

@@ -9,4 +9,5 @@ about: Born in 1987 in Sao Paulo – Brazil, Victor Franca Duarte began his jiu
   Dragon BJJ continued to grow more and more every year, becoming one of the
   most important Brazilian Jiu Jitsu schools from Tirol.
 image: /assets/bjj.jpg
+order: 1
 ---

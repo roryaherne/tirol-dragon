@@ -17,7 +17,7 @@ export default () => {
     <section id="faqs">
       <div className="row content">
         <div className="text-container">
-          <div className="row section-head">
+          <div className="section-head">
             <h2>{content.title}</h2>
           </div>
           <div className="twelve columns flex-container">

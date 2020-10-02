@@ -7,7 +7,7 @@ export default function() {
   const data = useStaticQuery(
     graphql`
     query FeaturesQuery {
-      allFile(filter: {relativePath: {glob: "features/*"}}, sort: {fields: birthtime}) {
+      allFile(filter: {relativePath: {glob: "features/*"}}, sort: {fields: childMarkdownRemark___frontmatter___order}) {
         edges {
           node {
             childMarkdownRemark {

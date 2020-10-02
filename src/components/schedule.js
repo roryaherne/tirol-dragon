@@ -11,7 +11,7 @@ export default () => {
 
   return (
     <section id="schedule">
-      <div className="row section-head">
+      <div className="section-head">
         <h2>{content.title}</h2>
         <p>{content.body}</p>
       </div>
