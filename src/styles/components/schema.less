@@ -1,0 +1,87 @@
+@import (reference) "../utils/variables.less";
+@import "../utils/grid.less";
+
+//#region spacings
+.margin-bottom-small{
+    margin-bottom: @spacing-small-desktop;
+    @media @tablet{
+        margin-bottom: @spacing-small-tablet;
+    }
+    @media @mobile{
+        margin-bottom: @spacing-small-mobile;
+    }
+}
+
+.margin-bottom-medium{
+    margin-bottom: @spacing-medium-desktop;
+    @media @tablet{
+        margin-bottom: @spacing-medium-tablet;
+    }
+    @media @mobile{
+        margin-bottom: @spacing-medium-mobile;
+    }
+}
+
+.margin-bottom-large{
+    margin-bottom: @spacing-large-desktop;
+    @media @tablet{
+        margin-bottom: @spacing-large-tablet;
+    }
+    @media @mobile{
+        margin-bottom: @spacing-large-mobile;
+    }
+}
+
+.margin-top-small{
+    margin-top: @spacing-small-desktop;
+    @media @tablet{
+        margin-top: @spacing-small-tablet;
+    }
+    @media @mobile{
+        margin-top: @spacing-small-mobile;
+    }
+}
+
+.margin-top-neg-small{
+    margin-top: @spacing-neg-small-desktop;
+    @media @tablet{
+        margin-top: @spacing-neg-small-tablet;
+    }
+    @media @mobile{
+        margin-top: @spacing-neg-small-mobile;
+    }
+}
+
+.margin-top-medium{
+    margin-top: @spacing-medium-desktop;
+    @media @tablet{
+        margin-top: @spacing-medium-tablet;
+    }
+    @media @mobile{
+        margin-top: @spacing-medium-mobile;
+    }
+}
+
+.margin-top-large{
+    margin-top: @spacing-large-desktop;
+    @media @tablet{
+        margin-top: @spacing-large-tablet;
+    }
+    @media @mobile{
+        margin-top: @spacing-large-mobile;
+    }
+}
+
+.content-box{
+    padding-top: calc(7px + 4.2%);
+    padding-bottom: calc(7px + 6.2%);
+    padding-left: calc(7px + 6.2%);
+    padding-right: calc(7px + 6.2%);
+}
+
+//#endregion
+
+
+.section-head{
+    .margin-bottom-small();
+}

@@ -74,11 +74,19 @@ module.exports = {
     },
     contacts: [
       { text: `+43 660 5188005`, url: `tel:+436605188005`, icon: 'faMobile' },
-      { text: `+43 660 1116278`, url: `tel:+436601116278` , icon: 'faMobile' },
+      { text: `+43 660 1116278`, url: `tel:+436601116278`, icon: 'faMobile' },
       { text: `contact[@]tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com?subject=Bjj%20Enquiry`, icon: 'faEnvelope' },
     ],
   },
-  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`, `gatsby-plugin-less`, `gatsby-plugin-netlify-cms`,
+  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`, `gatsby-plugin-less`,
+    `gatsby-plugin-netlify-cms`, `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/content/`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

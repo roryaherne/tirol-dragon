@@ -1,0 +1,83 @@
+// #region Screen Sizes
+
+@screen-mobile-min: 320px;
+@screen-mobile: @screen-mobile-min;
+
+@screen-tablet-min: 769px;
+@screen-tablet: @screen-tablet-min;
+
+@screen-desktop-s-min: 1027px;
+@screen-desktop-s: @screen-desktop-s-min;
+
+@screen-desktop-m-min: 1300px;
+@screen-desktop-m: @screen-desktop-s-min;
+
+@screen-desktop-l-min: 1640px;
+@screen-desktop-l: @screen-desktop-s-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-mobile-max: (@screen-tablet-min - 1);
+@screen-tablet-max: (@screen-desktop-s-min - 1);
+@screen-desktop-s-max: (@screen-desktop-m-min - 1);
+@screen-desktop-m-max: (@screen-desktop-l-min - 1);
+
+@mobile: %(~"(max-width: %a)", @screen-mobile-max);
+@tablet: %(~"(min-width: %a) and (max-width: %d)", @screen-tablet-min, @screen-tablet-max);
+@tablet-up: %(~"(min-width: %a)", @screen-tablet-min);
+@tablet-down: %(~"(max-width: %a)", @screen-tablet-max);
+@desktop: %(~"(min-width: %a)", @screen-desktop-s-min);
+@desktop-l: %(~"(min-width: %a)", @screen-desktop-l-min);
+
+
+
+// #endregion
+
+// #region animations
+
+@short-transition: 200ms;
+@medium-transition: 300ms;
+@long-transition: 500ms;
+
+@cubic-bezier: cubic-bezier(1,-0.18, 0.81, 1.44);
+
+// #endregion
+
+// #region spacings
+
+@spacing-small-desktop: 2.5rem;
+@spacing-small-tablet: 1.125rem;
+@spacing-small-mobile: 0.625rem;
+
+@spacing-medium-desktop: 5rem;
+@spacing-medium-tablet: 2.5rem;
+@spacing-medium-mobile: 1.125rem;
+
+@spacing-large-desktop: 7.5rem;
+@spacing-large-tablet: 3.75rem;
+@spacing-large-mobile: 1.875rem;
+
+@spacing-neg-small-desktop: -2.0rem;
+@spacing-neg-small-tablet: -2.0rem;
+@spacing-neg-small-mobile: -2.0rem;
+
+// #endregion
+
+
+// #region z-index
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-modal-background:  1039;
+@zindex-modal:             1040;
+
+
+// #endregion

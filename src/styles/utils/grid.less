@@ -1,0 +1,109 @@
+@import "./variables.less";
+
+//#region Mixins & Variables
+
+@grid-columns: 12;
+@grid-column-gap: 2rem;
+
+.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+    .col-@{class}-@{index} {
+        grid-column-end: span @index;
+    }
+}
+
+.calc-grid-column(@index, @class, @type)
+    when
+    (@type = position)
+    and
+    (@index > 0) {
+    .col-@{class}-start-@{index} {
+        grid-column-start: @index;
+    }
+}
+
+// Basic looping in LESS
+.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
+    .calc-grid-column(@index, @class, @type);
+    // next iteration
+    .loop-grid-columns((@index - 1), @class, @type);
+}
+
+// Create grid for specific class
+.make-grid(@class) {
+    .loop-grid-columns(@grid-columns, @class, width);
+    .loop-grid-columns(@grid-columns, @class, position);
+}
+
+.grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(@grid-columns, 1fr);
+    grid-column-gap: @grid-column-gap;
+    @media @mobile{
+        grid-column-gap: 1.5rem;
+    }
+    @media (max-width: 435px) {
+        // On really tiny screens colums start to overflow the container,
+        // because the accumulated column gap is bigger than the container.
+        // This should make it useable even with screens < 300px.
+        grid-column-gap: 0;
+    }
+
+    > * {
+        grid-column-end: span 12;
+    }
+    &.no-column-gap {
+        grid-column-gap: 0;
+    }
+}
+
+.container-inner {
+    @media (min-width: @screen-mobile-min) {
+        width: calc(~'100% - 2rem');
+    }
+    @media (min-width: @screen-tablet-min) {
+        width: calc(~'80% - 2rem');
+    }
+    @media (min-width: @screen-desktop-s-min) {
+        width: 992px;
+    }
+    @media (min-width: @screen-desktop-m-min) {
+        width: 1268px;
+    }
+    @media (min-width: @screen-desktop-l-min) {
+        width: 1400px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-outer {
+    width: 100%;
+    &:not(.full-width){
+        max-width: 2560px;
+        margin: 0 auto;
+    }
+}
+
+// Generate the classes
+.make-grid(xs);
+
+@media @tablet-up {
+    .make-grid(sm);
+}
+
+@media @desktop {
+    .make-grid(lg);
+}
+
+@media @tablet-up {
+    .col-sm-start-0{
+        grid-column-start: unset;
+    }
+}
+
+@media @desktop {
+    .col-lg-start-0{
+        grid-column-start: unset;
+    }
+}

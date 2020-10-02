@@ -12,6 +12,7 @@ import "../styles/layout.less"
 import "../styles/media-queries.css"
 import "../styles/animate.css"
 import "../styles/prettyPhoto.css"
+import "../styles/components/schema.less"
 
 import 'typeface-open-sans';
 import 'typeface-montserrat';

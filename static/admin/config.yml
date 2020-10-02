@@ -9,7 +9,7 @@ public_folder: /assets
 collections:
   - name: schedule
     label: Schedule
-    folder: _schedule
+    folder: /content/schedule
     create: true
     fields:
       - { label: Title, name: title, hint: "unique title eg: Monday Bjj 1" }
@@ -19,7 +19,7 @@ collections:
       - { label: "Class Name", name: classLabel, widget: string}
   - name: coaches
     label: Coaches
-    folder: _coaches
+    folder: /content/coaches
     create: true
     fields:
       - { label: Title, name: title, hint: "unique title eg: Victor Duarte" }
@@ -27,8 +27,17 @@ collections:
       - { label: image, name: image, widget: image }
   - name: faqs
     label: FAQs
-    folder: _faqs
+    folder: /content/faqs
     create: true
     fields:
       - { label: Question, name: title, widget: string }
       - { label: Answer, name: answer, widget: text }
+  - name: features
+    label: Features
+    folder: /content/features
+    create: true
+    fields:
+      - { label: Title, name: title }
+      - { label: Name, name: name }
+      - { label: Body, name: body, widget: text }
+      - { label: Image, name: image, widget: image }
