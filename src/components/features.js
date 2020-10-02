@@ -23,8 +23,6 @@ export default function() {
     }
     `)
 
-  console.log(data)
-
   return(
   <section id='features' className='white-section'>
     {data.allFile.edges.map(({ node: {childMarkdownRemark: {frontmatter}} }, index) => {

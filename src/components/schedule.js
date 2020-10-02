@@ -1,46 +1,47 @@
 import React from "react"
-import content from "../../content/schedule.yaml"
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { useStaticQuery, graphql } from "gatsby"
 
-export default () => {
+import ScheduleDay from "./schedule-day"
 
-  library.add(fas)
+export default function () {
 
-
-
-  return (
-    <section id="schedule">
-      <div className="section-head">
-        <h2>{content.title}</h2>
-        <p>{content.body}</p>
-      </div>
-
-      <div className="row">
-        <div className="schedule-tables bgrid-fifths s-bgrid-halves">
-          {content.days.map((day, index) =>
-            <div className="column no-padding">
-              <div className="day-block">
-                <h3 className="day">
-                  {day.name}
-                </h3>
-                {day.classes.map((unit, index) =>
-                  <React.Fragment>
-                  <p className="plan-time">
-                    <span>{unit.start} - {unit.end}</span>
-                  </p>
-                  <footer className="plan-label">
-                    {unit.label}
-                  </footer>
-                  </React.Fragment>
-                )
+    const data = useStaticQuery(
+        graphql`
+        query ScheduleQuery {
+            allFile(filter: {relativePath: {glob: "schedule/*"}}) {
+              group(field: childMarkdownRemark___frontmatter___day) {
+                edges {
+                node {
+                  childMarkdownRemark {
+                    frontmatter {
+                      endTime
+                      startTime
+                      day
+                      classLabel
+                    }
+                  }
                 }
-              </div>
-            </div>
-          )
+              }
+              }
+            }
           }
-        </div>
-      </div>
-    </section>
-  )
+    `)
+
+    return (
+        <section id="schedule">
+            <div className="section-head">
+                <h2>Schedule</h2>
+                <p>Class times are as follows</p>
+            </div>
+
+            <div className="row">
+                <div className="schedule-tables bgrid-fifths s-bgrid-halves">
+                    {data.allFile.group.map(({ edges }, index) => (
+                        <ScheduleDay edges={edges}></ScheduleDay>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }
+

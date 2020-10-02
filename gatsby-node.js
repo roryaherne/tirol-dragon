@@ -13,16 +13,18 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         }),
         schema.buildObjectType({
             name: 'Frontmatter',
-            startTime: {
-                type: 'String!',
-                resolve(parent) {
-                    return `${parent.startTime}`;
-                }
-            },
-            endTime: {
-                type: 'String!',
-                resolve(parent) {
-                    return `${parent.endTime}`;
+            fields: {
+                startTime: {
+                    type: 'String!',
+                    resolve(parent) {
+                        return `${parent.startTime}`;
+                    }
+                },
+                endTime: {
+                    type: 'String!',
+                    resolve(parent) {
+                        return `${parent.endTime}`;
+                    }
                 }
             }
         }),
