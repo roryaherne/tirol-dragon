@@ -1,6 +1,6 @@
 import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import BrandSVG from "./svgs/brand-icon"
 
 import content from "../../content/hero.yaml"
 
@@ -11,7 +11,9 @@ export default () => (
     <div className="row">
       <div className="twelve columns">
         <div className="hero-text">
-          <img alt="logo" src={ useSiteMetadata().logo } className="hero-image"/>
+          <div class="hero-image">
+            <BrandSVG></BrandSVG>
+          </div>
           <h1 className="responsive-headline">{ content.headline }</h1>
           <p>{ content.body }</p>
         </div>
