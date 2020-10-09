@@ -31,3 +31,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     ]
     createTypes(typeDefs)
 }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+        devtool: "eval-source-map"
+    });
+};
