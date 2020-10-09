@@ -228,17 +228,8 @@ ul.nav li.current button {
 /* ------------------------------------------------------------------ */
 
 #hero {
-   background: #23292f url(img/hero-bg.png);
+   background: #23292f;
    overflow: hidden;
-}
-
-/* For high-res devices */
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-   #hero {
-      background: #23292f url(img/hero-bg_@2X.png);
-      background-size: 200px 200px;
-   }
 }
 
 #hero .row {
@@ -281,7 +272,6 @@ ul.nav li.current button {
 }
 
 .hero-image img {
-   vertical-align: bottom;
    display: block;
 }
 
@@ -373,10 +363,6 @@ section.white-section{
    border: 1px solid #E6E6E6;
    text-align: center;
    margin-bottom: 36px;
-}
-
-#schedule .no-padding {
-   /* padding: 0; */
 }
 
 .day {
@@ -730,13 +716,6 @@ ul.features li {
    position: relative;
 }
 
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-
-.flexslider .slides>li {
-   display: none;
-   -webkit-backface-visibility: hidden;
-}
-
 /* Suggested container for slide animation setups. Can replace this with your own */
 
 .flex-container {
@@ -789,21 +768,6 @@ ul.features li {
    *display: inline;
 }
 
-.slick-dots li button::before {
-   width: 12px;
-   height: 12px;
-   display: block;
-   background: #ddd;
-   background: #fff;
-   cursor: pointer;
-   text-indent: -9999px;
-   border-radius: 20px;
-   box-shadow: inset 0 0 3px rgba(255, 255, 255, .3);
-}
-
-.slick-dots li.slick-active button:before {
-   opacity: 1;
-}
 
 .flex-control-paging li a:hover {
    background: #CCC;
@@ -1210,35 +1174,6 @@ a#imagelightbox-close:hover, a#imagelightbox-close:focus {
 
 /* l. faqs
 /* ------------------------------------------------------------------ */
-
-section#faqs{
-   background: #fff url(http://localhost:8000/static/grey-74f7cdf….png);
-}
-
-.accordion__heading{
-   background-color: #EBEEEE;
-   position: relative;
-   padding: 1rem;
-   border-bottom: 1px solid white;
-}
-
-.accordion__button[aria-expanded='true'] .heading:before{
-   transform: rotate(-90deg);
-}
-
-.accordion__button .heading{
-   margin-bottom: 0;
-}
-
-.accordion__button .heading:before {
-   content: "";
-   border-top: 7px solid #313131;
-   border-left: 7px solid transparent;
-   border-right: 7px solid transparent;
-   position: absolute;
-   top: 25px;
-   right: 30px;
-}
 
 .round-image{
    width: 100px;

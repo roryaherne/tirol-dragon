@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import FAQPage from './structured-data/faqPage'
 
+import "../styles/components/faqs.less"
+
 import {
   Accordion,
   AccordionItem,

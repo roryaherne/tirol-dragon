@@ -79,7 +79,7 @@ module.exports = {
       { text: `contact[@]tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com?subject=Bjj%20Enquiry`, icon: 'faEnvelope' },
     ],
   },
-  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`, `gatsby-plugin-less`,
+  plugins: [`gatsby-plugin-anchor-links`, `gatsby-plugin-smoothscroll`, `react-scrollspy`, `gatsby-plugin-less`, `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`, `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -107,7 +107,7 @@ module.exports = {
         develop: true, // Enable while using `gatsby develop`
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
-        purgeOnly : ['/styles/animate.css'], // Purge only these files/folders
+        purgeOnly : ['/styles/animate.css', '/styles/layout.less'], // Purge only these files/folders
       }
     }
   ],

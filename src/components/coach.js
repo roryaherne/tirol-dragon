@@ -1,11 +1,11 @@
 import React from "react"
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "../styles/components/card.less"
 
 export default ({ coach, cols }) => (
     <div className={`coach card col-sm-${cols}`}>
         <div className="image-wrapper">
-            <img src={coach.image} alt="coach" />
+        <LazyLoadImage src={coach.image} alt="coach"/>
         </div>
         <div className="text-wrapper">
             <div className="outer-spacing">

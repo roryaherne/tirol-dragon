@@ -29,8 +29,6 @@ d. Default Styles
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
-@import url("~slick-carousel/slick/slick.css");
-@import url("~slick-carousel/slick/slick-theme.css");
 /* ------------------------------------------------------------------ */
 
 /* b. Preloader
@@ -144,6 +142,10 @@ abbr[title], dfn[title] {
 table {
    border-collapse: collapse;
    border-spacing: 0;
+}
+
+*:focus {
+   outline: none;
 }
 
 /* ------------------------------------------------------------------ */
@@ -662,7 +664,6 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
    margin: 0 0 24px 0;
    border: 0;
    outline: none;
-   vertical-align: middle;
    min-width: 225px;
    max-width: 100%;
    font-size: 15px;

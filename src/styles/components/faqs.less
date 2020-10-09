@@ -1,0 +1,28 @@
+section#faqs{
+    background: #fff;
+ }
+ 
+ .accordion__heading{
+    background-color: #EBEEEE;
+    position: relative;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+ }
+ 
+ .accordion__button[aria-expanded='true'] .heading:before{
+    transform: rotate(-90deg);
+ }
+ 
+ .accordion__button .heading{
+    margin-bottom: 0;
+ }
+ 
+ .accordion__button .heading:before {
+    content: "";
+    border-top: 7px solid #313131;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+ }

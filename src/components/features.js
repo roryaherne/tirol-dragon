@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import ScrollAnimation from 'react-animate-on-scroll'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-export default function() {
+export default function () {
 
   const data = useStaticQuery(
     graphql`
@@ -23,38 +24,38 @@ export default function() {
     }
     `)
 
-  return(
-  <section id='features' className='white-section'>
-    {data.allFile.edges.map(({ node: {childMarkdownRemark: {frontmatter}} }, index) => {
+  return (
+    <section id='features' className='white-section'>
+      {data.allFile.edges.map(({ node: { childMarkdownRemark: { frontmatter } } }, index) => {
 
-      let pos, imagepos
-      if (index % 2 === 0) {
-        pos = "right"
-        imagepos = "left"
-      } else {
-        pos = "left"
-        imagepos = "right"
-      }
+        let pos, imagepos
+        if (index % 2 === 0) {
+          pos = "right"
+          imagepos = "left"
+        } else {
+          pos = "left"
+          imagepos = "right"
+        }
 
-      return (
-        <div className={'row feature ' + frontmatter.name}>
-          <div className={'six columns ' + pos}>
-            <h3>{frontmatter.title}</h3>
-            <p>{frontmatter.about}</p>
+        return (
+          <div className={'row feature ' + frontmatter.name}>
+            <div className={'six columns ' + pos}>
+              <h3>{frontmatter.title}</h3>
+              <p>{frontmatter.about}</p>
+            </div>
+
+            <ScrollAnimation
+              animateIn="pulse"
+              animateOnce={true}
+              initiallyVisible={true}
+              className={'six columns feature-media ' + imagepos}
+            >
+              <LazyLoadImage src={frontmatter.image} alt=""/>
+            </ScrollAnimation>
           </div>
-
-          <ScrollAnimation
-            animateIn="pulse"
-            animateOnce={true}
-            initiallyVisible={true}
-            className={'six columns feature-media ' + imagepos}
-          >
-            <img src={frontmatter.image} alt="" />
-          </ScrollAnimation>
-        </div>
-      )
-    })}
-  </section>
-)
+        )
+      })}
+    </section>
+  )
 
 }
