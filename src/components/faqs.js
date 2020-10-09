@@ -41,7 +41,7 @@ export default () => {
             <h2>Frequently Asked Questions</h2>
           </div>
           <div className="twelve columns flex-container">
-            <p className="accordion-wrapper">
+            <div className="accordion-wrapper">
               <Accordion allowZeroExpanded="true">
               {data.allFile.edges.map(({ node: {childMarkdownRemark: {frontmatter}} }, index) => (
                   <AccordionItem>
@@ -58,7 +58,7 @@ export default () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-            </p>
+            </div>
           </div>
         </div>
       </div>

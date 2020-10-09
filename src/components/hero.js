@@ -11,7 +11,7 @@ export default () => (
     <div className="row">
       <div className="twelve columns">
         <div className="hero-text">
-          <div class="hero-image">
+          <div className="hero-image">
             <BrandSVG></BrandSVG>
           </div>
           <h1 className="responsive-headline">{ content.heroHeadline }</h1>
