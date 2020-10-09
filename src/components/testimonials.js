@@ -1,12 +1,29 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Slider from "react-slick"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteRight, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
-import content from '../../content/testimonials.yaml'
-
 
 const MySlider = () =>{
+
+  const data = useStaticQuery(
+    graphql`
+    query TestimonialsQuery {
+      allFile(filter: {relativePath: {glob: "testimonials/*"}}) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                text
+                title
+              }
+            }
+          }
+        }
+      }
+    }
+    `)
 
   const settings = {
     dots: true,
@@ -34,16 +51,16 @@ const MySlider = () =>{
       <div className="row content">
         <span><i className="quote-left fa"><FontAwesomeIcon icon={ faQuoteLeft } /></i></span>
         <div className="text-container">
-          <div className="twelve columns">
-            <h2>{ content.title }</h2>
+          <div className="section-head">
+            <h2>Testimonials</h2>
           </div>
           <div className="twelve columns flex-container">
           <Slider {...settings} style={{ userSelect: 'text' }}>
-            { content.quotes.map((quote, index) => (
+            {data.allFile.edges.map(({ node: {childMarkdownRemark: {frontmatter}} }, index) => (
               <div>
                 <blockquote>
-                  <p>{ quote.text }</p>
-                  <cite>{ quote.cite }</cite>
+                  <p>{ frontmatter.text }</p>
+                  <cite>{ frontmatter.title }</cite>
                 </blockquote>
               </div>
             ))}

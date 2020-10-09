@@ -50,3 +50,13 @@ collections:
     fields:
       - { label: Text, name: text, widget: text }
       - { label: Cite, name: title, widget: string }
+  - label: Pages
+    name: "pages"
+    files:
+      - label: "Site Configuration"
+        name: "site config"
+        file: "/content/config.yml"
+        fields:
+          - {label: Hero Headline, name: heroHeadline, widget: string}
+          - {label: Hero Body, name: heroBody, widget: text}
+          - {label: Impressum, name: impressum, widget: text}

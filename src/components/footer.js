@@ -7,6 +7,8 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faMapMarkerAlt, faUsers, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import content from "../../content/config.yml"
+
 import "../styles/components/footer.less"
 
 export default () => {
@@ -22,7 +24,7 @@ export default () => {
                         </AnchorLink>
                     </div>
 
-                    <p>{footer.text}</p>
+                    <p>{content.impressum}</p>
 
                 </div>
 
@@ -59,7 +61,7 @@ export default () => {
                             <ul>
                                 {contacts.map((contact, index) =>
                                     <li key={index}>
-                                        <a href={contact.url}><FontAwesomeIcon icon={contact.icon} /> {contact.text}</a>
+                                        <a href={contact.url}>{contact.text}</a>
                                     </li>
                                 )}
                             </ul>

@@ -2,6 +2,7 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * 
  */
 
 module.exports = {
@@ -73,8 +74,8 @@ module.exports = {
       country: `Austria`,
     },
     contacts: [
-      { text: `+43 660 5188005`, url: `tel:+436605188005`, icon: 'faMobile' },
-      { text: `+43 660 1116278`, url: `tel:+436601116278`, icon: 'faMobile' },
+      { text: `+43 660 5188005`, url: `tel:+436605188005`, icon: 'faEnvelope' },
+      { text: `+43 660 1116278`, url: `tel:+436601116278`, icon: 'faEnvelope' },
       { text: `contact[@]tiroldragonbjj.com`, url: `mailto:contact@tiroldragonbjj.com?subject=Bjj%20Enquiry`, icon: 'faEnvelope' },
     ],
   },
@@ -97,6 +98,16 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         exclude: [`/robots`, `/sitemap`]
+      }
+    },
+    { 
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        develop: true, // Enable while using `gatsby develop`
+        // whitelist: ['whitelist'], // Don't remove this selector
+        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
+        purgeOnly : ['/styles/animate.css'], // Purge only these files/folders
       }
     }
   ],

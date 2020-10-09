@@ -11,7 +11,6 @@ import "../styles/default.less"
 import "../styles/layout.less"
 import "../styles/media-queries.css"
 import "../styles/animate.css"
-import "../styles/prettyPhoto.css"
 import "../styles/components/schema.less"
 
 import 'typeface-open-sans';
@@ -35,7 +34,7 @@ export default function Layout({ children }) {
         <link rel="shortcut icon" href={'/' + favicon} type="image/png" />
         <meta name="robots" content="index,follow" />
         <link href={url} rel="canonical" />
-        <meta property="og:title" content="SOS-Kinderdörfer weltweit" />
+        <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={logo} />
