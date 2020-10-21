@@ -1,31 +1,31 @@
 import React from "react"
-// import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-// import ScheduleDay from "./schedule-day"
+import ScheduleDay from "./schedule-day"
 
 export default function () {
 
-    // const data = useStaticQuery(
-    //     graphql`
-    //     query ScheduleQuery {
-    //         allFile(filter: {relativePath: {glob: "schedule/*"}}) {
-    //           group(field: childMarkdownRemark___frontmatter___day) {
-    //             edges {
-    //             node {
-    //               childMarkdownRemark {
-    //                 frontmatter {
-    //                   endTime
-    //                   startTime
-    //                   day
-    //                   classLabel
-    //                 }
-    //               }
-    //             }
-    //           }
-    //           }
-    //         }
-    //       }
-    // `)
+    const data = useStaticQuery(
+        graphql`
+        query ScheduleQuery {
+            allFile(filter: {relativePath: {glob: "schedule/*"}}) {
+              group(field: childMarkdownRemark___frontmatter___day) {
+                edges {
+                node {
+                  childMarkdownRemark {
+                    frontmatter {
+                      endTime
+                      startTime
+                      day
+                      classLabel
+                    }
+                  }
+                }
+              }
+              }
+            }
+          }
+    `)
 
     return (
         <section id="schedule">
@@ -36,9 +36,9 @@ export default function () {
 
             <div className="row">
                 <div className="schedule-tables bgrid-fifths s-bgrid-halves">
-                    {/* {data.allFile.group.map(({ edges }, index) => (
+                    {data.allFile.group.map(({ edges }, index) => (
                         <ScheduleDay edges={edges}></ScheduleDay>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         </section>
