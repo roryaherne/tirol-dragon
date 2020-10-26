@@ -7,8 +7,8 @@ export default function () {
 
     const data = useStaticQuery(
         graphql`
-        query ScheduleQuery2 {
-            allFile(filter: {relativePath: {glob: "schedule/*"}}) {
+        query TimeTable {
+            allFile(filter: {relativePath: {glob: "timetable/*"}}) {
               group(field: childMarkdownRemark___frontmatter___day) {
                 edges {
                 node {
