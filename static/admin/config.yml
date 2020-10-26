@@ -7,9 +7,9 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: schedule
-    label: Schedule
-    folder: /content/schedule
+  - name: timetable
+    label: Timetable
+    folder: /content/timetable
     create: true
     fields:
       - { label: Title, name: title, hint: "unique title eg: Monday Bjj 1" }
